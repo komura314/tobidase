@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app flat color="appHeader">
-    <v-app-bar-nav-icon class="hidden-md-and-up" @click="toggleDrawer" />
+    <v-app-bar-nav-icon class="hidden-md-and-up" />
     <v-container class="mx-auto py-0">
       <v-row align="center">
         <v-icon
@@ -9,17 +9,11 @@
           height="48"
           width="48"
           max-width="48"
-          @click="$vuetify.goTo(0)"
+          @click="onClick($event, links[0])"
         >
           mdi-door-open
         </v-icon>
-        <v-app-bar-title
-          class="grey--text text--darken-3"
-          style="cursor:pointer"
-          @click="$router.push('/')"
-        >
-          TOBIDASE!
-        </v-app-bar-title>
+        <v-btn text @click="onClick($event, links[0])"> TOBIDASE! </v-btn>
 
         <v-spacer />
 
@@ -45,7 +39,7 @@ export default {
       links: [
         {
           text: 'Top',
-          href: '#!',
+          href: '#scroll-top',
         },
         {
           text: 'Profile',
@@ -72,12 +66,12 @@ export default {
   },
   methods: {
     onClick(e, item) {
-      e.stopPropagation();
+      e.stopPropagation()
 
-      if (item.to || !item.href) return;
+      if (item.to || !item.href) return
 
-      this.$vuetify.goTo(item.href.endsWith("!") ? 0 : item.href);
-    }
-  }
+      this.$vuetify.goTo(item.href)
+    },
+  },
 }
 </script>
