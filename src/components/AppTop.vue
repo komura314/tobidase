@@ -1,28 +1,6 @@
 <template>
   <div id="scroll-top">
-    Topです
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <video width="100%" src="/videos/tobidase.mp4" autoplay playsinline muted />
   </div>
 </template>
 <script>
