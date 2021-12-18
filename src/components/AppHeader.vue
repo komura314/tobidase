@@ -3,31 +3,38 @@
     <v-app-bar-nav-icon class="hidden-md-and-up" />
     <v-container class="mx-auto py-0">
       <v-row align="center">
-        <v-icon
-          large
-          class="mr-5"
-          height="48"
-          width="48"
-          max-width="48"
-          @click="onClick($event, links[0])"
-        >
-          mdi-door-open
-        </v-icon>
-        <v-btn text @click="onClick($event, links[0])"> TOBIDASE! </v-btn>
+        <v-col>
+          <v-icon
+            large
+            class="mr-5"
+            height="48"
+            width="48"
+            max-width="48"
+            @click="onClick($event, links[0])"
+          >
+            mdi-door-open
+          </v-icon>
+          <v-btn text @click="onClick($event, links[0])"> TOBIDASE! </v-btn>
+        </v-col>
 
         <v-spacer />
-
-        <v-btn
-          v-for="(link, i) in links"
-          :key="i"
-          v-bind="link"
-          min-width="100"
-          class="hidden-sm-and-down gray--text"
-          text
-          @click="onClick($event, link)"
-        >
-          {{ link.text }}
-        </v-btn>
+        <v-col>
+          <v-tabs
+            v-model="tabSelected"
+            background-color="appHeader"
+            class="hidden-sm-and-down "
+          >
+            <v-tab
+              v-for="(link, i) in links"
+              :key="i"
+              min-width="100"
+              class="gray--text"
+              @click="onClick($event, link)"
+            >
+              {{ link.text }}
+            </v-tab>
+          </v-tabs>
+        </v-col>
       </v-row>
     </v-container>
 
@@ -44,6 +51,7 @@ export default {
   data() {
     return {
       displayLoaded: false,
+      tabSelected: '',
       links: [
         {
           text: 'Top',
