@@ -33,14 +33,31 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
 
+  googleFonts: {
+    families: {
+      'Klee+One': [400],
+    },
+    download: true,
+    inject: true,
+    overwriting: false,
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
+    defaultAssets: {
+      font: {
+        family: 'Klee One',
+      },
+    },
     theme: {
       dark: false,
       themes: {
