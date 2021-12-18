@@ -17,10 +17,15 @@
               height="48"
               width="48"
               max-width="48"
+              color="primary"
             >
               mdi-door-open
             </v-icon>
-            TOBIDASE!
+
+            <span class="orange--text text--darken-1"> TO </span>
+            BI
+            <span class="orange--text text--darken-1"> DA </span>
+            SE!
           </v-btn>
         </v-col>
 
