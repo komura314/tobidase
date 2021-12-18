@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app flat color="appHeader">
+  <v-app-bar app flat color="appHeader" extension-height="5">
     <v-app-bar-nav-icon class="hidden-md-and-up" />
     <v-container class="mx-auto py-0">
       <v-row align="center">
@@ -30,12 +30,20 @@
         </v-btn>
       </v-row>
     </v-container>
+
+    <template #extension>
+      <v-progress-linear
+        v-if="!displayLoaded"
+        indeterminate
+      ></v-progress-linear>
+    </template>
   </v-app-bar>
 </template>
 <script>
 export default {
   data() {
     return {
+      displayLoaded: false,
       links: [
         {
           text: 'Top',
@@ -63,6 +71,9 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    this.displayLoaded = true
   },
   methods: {
     onClick(e, item) {
