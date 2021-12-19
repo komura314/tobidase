@@ -1,5 +1,5 @@
 <template>
-  <div id="compornent-contact">
+  <div :id="compornentId">
     Contactです
     <br />
     <br />
@@ -26,10 +26,13 @@
   </div>
 </template>
 <script>
+import { prefixCompornentId, keyContact } from '../plugins/feald'
 export default {
   name: 'AppContact',
   data() {
-    return {}
+    return {
+      compornentId: prefixCompornentId + keyContact,
+    }
   },
 }
 </script>

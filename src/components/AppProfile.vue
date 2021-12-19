@@ -1,5 +1,5 @@
 <template>
-  <div id="compornent-profile">
+  <div :id="compornentId">
     Profileです
     <br />
     <br />
@@ -26,10 +26,13 @@
   </div>
 </template>
 <script>
+import { prefixCompornentId, keyProfile } from '../plugins/feald'
 export default {
   name: 'AppProfile',
   data() {
-    return {}
+    return {
+      compornentId: prefixCompornentId + keyProfile,
+    }
   },
 }
 </script>

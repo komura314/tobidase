@@ -1,5 +1,5 @@
 <template>
-  <div id="compornent-lifeplan">
+  <div :id="compornentId">
     Lifeplanです
     <br />
     <br />
@@ -26,10 +26,13 @@
   </div>
 </template>
 <script>
+import { prefixCompornentId, keyLifeplan } from '../plugins/feald'
 export default {
   name: 'AppLifeplan',
   data() {
-    return {}
+    return {
+      compornentId: prefixCompornentId + keyLifeplan,
+    }
   },
 }
 </script>
