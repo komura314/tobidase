@@ -58,23 +58,29 @@
   </v-app-bar>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import { HEADERS } from '../plugins/feald'
 export default {
   data() {
     return {
       displayLoaded: false,
-      tabSelected: '',
       headers: HEADERS,
     }
+  },
+  computed: {
+    ...mapGetters('app-scroll', ['getAppScrollSelectTab']),
+    tabSelected() {
+      return this.getAppScrollSelectTab
+    },
   },
   mounted() {
     this.displayLoaded = true
   },
   methods: {
     onClick(header) {
-      if (!header || !header.scrollId){
+      if (!header || !header.scrollId) {
         return
-      } 
+      }
       this.$vuetify.goTo(header.scrollId)
     },
   },

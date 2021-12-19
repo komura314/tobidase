@@ -1,10 +1,11 @@
-export const keyTop = "top"
-export const keyProfile = "profile"
-export const keyLifeplan = "lifeplan"
-export const keyDesired = "desired"
-export const keyContact = "contact"
+export const keyTop = 'top'
+export const keyProfile = 'profile'
+export const keyLifeplan = 'lifeplan'
+export const keyDesired = 'desired'
+export const keyContact = 'contact'
 
-export const prefixCompornentId = "compornent-"
+export const prefixCompornentId = 'compornent-'
+export const prefixRefId = 'ref'
 
 const TOP = {
   key: keyTop,
@@ -36,10 +37,9 @@ const CONTACT = {
   scrollId: `#${prefixCompornentId}${keyContact}`,
 }
 
-export const HEADERS = [
-  TOP,
-  PROFILE,
-  LIFEPLAN,
-  DESIRED,
-  CONTACT,
-]
+export const HEADERS = [TOP, PROFILE, LIFEPLAN, DESIRED, CONTACT]
+
+export const HEADER_KEY_LIST = []
+for (const header of HEADERS) {
+  HEADER_KEY_LIST.push(header.key)
+}
