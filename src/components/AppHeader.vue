@@ -8,7 +8,7 @@
             text
             x-large
             class="grey--text text--darken-1"
-            @click="onClick(links[0])"
+            @click="onClick(headers[0])"
           >
             <v-icon
               right
@@ -37,12 +37,12 @@
             class="hidden-sm-and-down"
           >
             <v-tab
-              v-for="(link, i) in links"
+              v-for="(header, i) in headers"
               :key="i"
               class="gray--text"
-              @click="onClick(link)"
+              @click="onClick(header)"
             >
-              {{ link.text }}
+              {{ header.disp }}
             </v-tab>
           </v-tabs>
         </v-col>
@@ -58,43 +58,24 @@
   </v-app-bar>
 </template>
 <script>
+import { HEADERS } from '../plugins/feald'
 export default {
   data() {
     return {
       displayLoaded: false,
       tabSelected: '',
-      links: [
-        {
-          text: 'Top',
-          href: '#compornent-top',
-        },
-        {
-          text: 'Profile',
-          href: '#compornent-profile',
-        },
-        {
-          text: 'Lifeplan',
-          href: '#compornent-lifeplan',
-        },
-        {
-          text: 'Desired',
-          href: '#compornent-desired',
-        },
-        {
-          text: 'Contact',
-          href: '#compornent-contact',
-        },
-      ],
+      headers: HEADERS,
     }
   },
   mounted() {
     this.displayLoaded = true
   },
   methods: {
-    onClick(item) {
-      if (item.to || !item.href) return
-
-      this.$vuetify.goTo(item.href)
+    onClick(header) {
+      if (!header || !header.scrollId){
+        return
+      } 
+      this.$vuetify.goTo(header.scrollId)
     },
   },
 }

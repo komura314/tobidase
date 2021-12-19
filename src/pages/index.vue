@@ -15,7 +15,7 @@ import Lifeplan from '../components/AppLifeplan'
 import Desired from '../components/AppDesired'
 import Contact from '../components/AppContact'
 export default {
-  name: 'IndexPage',
+  name: 'AppIndex',
   components: {
     Top,
     Profile,
