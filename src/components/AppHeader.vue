@@ -77,10 +77,6 @@ export default {
           href: '#compornent-lifeplan',
         },
         {
-          text: 'Items',
-          href: '#compornent-items',
-        },
-        {
           text: 'Desired',
           href: '#compornent-desired',
         },
