@@ -1,5 +1,5 @@
 <template>
-  <div id="scroll-profile">
+  <div id="compornent-profile">
     Profileです
     <br />
     <br />

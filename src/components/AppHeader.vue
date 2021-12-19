@@ -66,27 +66,27 @@ export default {
       links: [
         {
           text: 'Top',
-          href: '#scroll-top',
+          href: '#compornent-top',
         },
         {
           text: 'Profile',
-          href: '#scroll-profile',
+          href: '#compornent-profile',
         },
         {
           text: 'Lifeplan',
-          href: '#scroll-lifeplan',
+          href: '#compornent-lifeplan',
         },
         {
           text: 'Items',
-          href: '#scroll-items',
+          href: '#compornent-items',
         },
         {
           text: 'Desired',
-          href: '#scroll-desired',
+          href: '#compornent-desired',
         },
         {
           text: 'Contact',
-          href: '#scroll-contact',
+          href: '#compornent-contact',
         },
       ],
     }

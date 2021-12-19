@@ -1,5 +1,5 @@
 <template>
-  <div id="scroll-lifeplan">
+  <div id="compornent-lifeplan">
     Lifeplanです
     <br />
     <br />

@@ -1,5 +1,5 @@
 <template>
-  <div id="scroll-contact">
+  <div id="compornent-contact">
     Contactです
     <br />
     <br />

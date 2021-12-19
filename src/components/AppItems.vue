@@ -1,5 +1,5 @@
 <template>
-  <div id="scroll-items">
+  <div id="compornent-items">
     Itemsです
     <br />
     <br />

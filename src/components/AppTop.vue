@@ -1,5 +1,5 @@
 <template>
-  <div id="scroll-top">
+  <div id="compornent-top">
     <video muted playsinline prelod="auto" class="el-video" width="100%">
       <source src="/videos/tobidase.mp4" type="video/mp4">
     </video>
