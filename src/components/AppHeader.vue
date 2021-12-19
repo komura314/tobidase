@@ -37,8 +37,8 @@
             class="hidden-sm-and-down"
           >
             <v-tab
-              v-for="(header, i) in headers"
-              :key="i"
+              v-for="header in headers"
+              :key="header.key"
               class="gray--text"
               @click="onClick(header)"
             >
