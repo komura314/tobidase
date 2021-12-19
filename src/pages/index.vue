@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Top from '../components/AppTop'
 import Profile from '../components/AppProfile'
 import Lifeplan from '../components/AppLifeplan'
@@ -44,6 +44,12 @@ export default {
     Desired,
     Contact,
   },
+  computed: {
+    ...mapGetters('app-scroll', ['getTabTransition', 'getTabScrollEvent']),
+    tabSelected() {
+      return this.getAppScrollSelectTab
+    },
+  },
   mounted() {
     window.addEventListener('scroll', this.onScroll)
   },
@@ -56,7 +62,9 @@ export default {
       const params = {
         scrollY: window.scrollY,
       }
-      this.setAppScrollSelectTab(params)
+      if (this.getTabScrollEvent) {
+        this.setAppScrollSelectTab(params)
+      }
     },
   },
 }

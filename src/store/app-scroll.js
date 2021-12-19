@@ -3,6 +3,7 @@ import { HEADER_KEY_LIST } from '../plugins/feald'
 export const state = () => ({
   compornentHeights: {},
   selectTab: 0,
+  tabScrollEvent: true,
 })
 export const getters = {
   getAppScrollCompornentHeights(state) {
@@ -10,6 +11,9 @@ export const getters = {
   },
   getAppScrollSelectTab(state) {
     return state.selectTab
+  },
+  getTabScrollEvent(state) {
+    return state.tabScrollEvent
   },
 }
 export const mutations = {
@@ -19,6 +23,9 @@ export const mutations = {
   SET_SELECT_TAB(state, { selectTab }) {
     state.selectTab = selectTab
   },
+  SET_TAB_SCROLL_EVENT(state, scrollEvent) {
+    state.tabScrollEvent = scrollEvent
+  },
 }
 export const actions = {
   setAppScrollCompornentHeight({ commit }, { key, height }) {
@@ -26,11 +33,21 @@ export const actions = {
   },
   setAppScrollSelectTab({ state, commit }, { scrollY }) {
     let selectTab = 0
+    const adjustment = 100
     for (let tab = 0; tab < HEADER_KEY_LIST.length; tab++) {
-      if (state.compornentHeights[HEADER_KEY_LIST[tab]] <= scrollY) {
+      if (
+        state.compornentHeights[HEADER_KEY_LIST[tab]] <=
+        scrollY + adjustment
+      ) {
         selectTab = tab
       }
     }
     commit('SET_SELECT_TAB', { selectTab })
+  },
+  setAppScrollTabScrollEvent({ commit }, scrollEvent) {
+    commit('SET_TAB_SCROLL_EVENT', scrollEvent)
+  },
+  setAppScrollTabScrollEventTrue({ commit }) {
+    commit('SET_TAB_SCROLL_EVENT', true)
   },
 }

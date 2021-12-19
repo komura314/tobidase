@@ -8,7 +8,7 @@
             text
             x-large
             class="grey--text text--darken-1"
-            @click="onClick(headers[0])"
+            @click="onClick(headers[0], false)"
           >
             <v-icon
               right
@@ -58,7 +58,7 @@
   </v-app-bar>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import { HEADERS } from '../plugins/feald'
 export default {
   data() {
@@ -77,11 +77,24 @@ export default {
     this.displayLoaded = true
   },
   methods: {
-    onClick(header) {
+    ...mapActions('app-scroll', [
+      'setAppScrollTabScrollEvent',
+      'setAppScrollTabScrollEventTrue',
+    ]),
+    onClick(header, scrollEventStop=true) {
       if (!header || !header.scrollId) {
         return
       }
+
+      if (scrollEventStop) {
+        this.setAppScrollTabScrollEvent(false)
+      }
+      
       this.$vuetify.goTo(header.scrollId)
+      
+      if (scrollEventStop) {
+        setTimeout(this.setAppScrollTabScrollEventTrue, 500)
+      }
     },
   },
 }
