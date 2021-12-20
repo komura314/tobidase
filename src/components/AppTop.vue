@@ -1,8 +1,12 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    <video muted playsinline prelod="auto" class="el-video" width="100%">
-      <source src="/videos/tobidase.mp4" type="video/mp4" />
-    </video>
+    <v-row class="video-box" justify="center" align="center">
+      <v-col>
+        <video muted playsinline prelod="auto" class="el-video video-size">
+          <source src="/videos/tobidase.mp4" type="video/mp4" />
+        </video>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
@@ -38,3 +42,12 @@ export default {
   },
 }
 </script>
+<style scoped>
+.video-box {
+  height: 93vh;
+}
+.video-size {
+  max-height: 90vh;
+  width: 100%;
+}
+</style>

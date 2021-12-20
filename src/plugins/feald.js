@@ -1,7 +1,7 @@
 export const keyTop = 'top'
-export const keyProfile = 'profile'
-export const keyLifeplan = 'lifeplan'
-export const keyDesired = 'desired'
+export const keyAbout = 'about'
+export const keyVision = 'vision'
+export const keyWork = 'work'
 export const keyContact = 'contact'
 
 export const prefixCompornentId = 'compornent-'
@@ -14,21 +14,21 @@ const TOP = {
 }
 
 const PROFILE = {
-  key: keyProfile,
-  disp: 'Profile',
-  scrollId: `#${prefixCompornentId}${keyProfile}`,
+  key: keyAbout,
+  disp: 'About',
+  scrollId: `#${prefixCompornentId}${keyAbout}`,
 }
 
 const LIFEPLAN = {
-  key: keyLifeplan,
-  disp: 'Lifeplan',
-  scrollId: `#${prefixCompornentId}${keyLifeplan}`,
+  key: keyVision,
+  disp: 'Vision',
+  scrollId: `#${prefixCompornentId}${keyVision}`,
 }
 
 const DESIRED = {
-  key: keyDesired,
-  disp: 'Desired',
-  scrollId: `#${prefixCompornentId}${keyDesired}`,
+  key: keyWork,
+  disp: 'Work',
+  scrollId: `#${prefixCompornentId}${keyWork}`,
 }
 
 const CONTACT = {

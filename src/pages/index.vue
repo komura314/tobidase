@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <Top />
-    <Profile />
-    <Lifeplan />
-    <Desired />
+    <About />
+    <Vision />
+    <Work />
     <Contact />
     <br />
     <br />
@@ -31,17 +31,17 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Top from '../components/AppTop'
-import Profile from '../components/AppProfile'
-import Lifeplan from '../components/AppLifeplan'
-import Desired from '../components/AppDesired'
+import About from '../components/AppAbout'
+import Vision from '../components/AppVision'
+import Work from '../components/AppWork'
 import Contact from '../components/AppContact'
 export default {
   name: 'AppIndex',
   components: {
     Top,
-    Profile,
-    Lifeplan,
-    Desired,
+    About,
+    Vision,
+    Work,
     Contact,
   },
   computed: {

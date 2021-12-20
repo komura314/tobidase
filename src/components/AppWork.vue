@@ -1,6 +1,6 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    Lifeplanです
+    Workです
     <br />
     <br />
     <br />
@@ -27,14 +27,14 @@
 </template>
 <script>
 import { mapActions } from 'vuex'
-import { prefixCompornentId, prefixRefId, keyLifeplan } from '../plugins/feald'
+import { prefixCompornentId, prefixRefId, keyWork } from '../plugins/feald'
 export default {
-  name: 'AppLifeplan',
+  name: 'AppWork',
   data() {
     return {
-      keyId: keyLifeplan,
-      compornentId: prefixCompornentId + keyLifeplan,
-      refId: prefixRefId + keyLifeplan,
+      keyId: keyWork,
+      compornentId: prefixCompornentId + keyWork,
+      refId: prefixRefId + keyWork,
     }
   },
   mounted() {
