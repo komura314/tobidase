@@ -1,8 +1,7 @@
 <template>
   <v-carousel
     v-model="selectMyPhoto"
-    interval="10000"
-    class="carousel-size my-10"
+    class="carousel-size mt-10"
     delimiter-icon="mdi-circle-medium"
     hide-delimiter-background
   >

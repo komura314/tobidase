@@ -7,16 +7,21 @@
       <v-col cols="12" md="6">
         <MyPhoto />
       </v-col>
+      <v-col cols="12" md="6">
+        <AboutTabs />
+      </v-col>
     </v-row>
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex'
 import { prefixCompornentId, prefixRefId, keyAbout } from '../plugins/feald'
+import AboutTabs from '../components/about/AboutTabs.vue'
 import MyPhoto from '../components/about/MyPhoto.vue'
 export default {
   name: 'AppAbout',
   components: {
+    AboutTabs,
     MyPhoto,
   },
   data() {
