@@ -1,38 +1,19 @@
 <template>
   <div :id="compornentId" :ref="refId">
     <CompornentTitle title="TIMELINE" ruby="過去と未来像" />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <TimelineStepper class="mt-5" />
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex'
 import { prefixCompornentId, prefixRefId, keyTimeline } from '../plugins/feald'
 import CompornentTitle from './common/CompornentTitle.vue'
+import TimelineStepper from './timeline/TimelineStepper.vue'
 export default {
   name: 'AppTimeline',
   components: {
     CompornentTitle,
+    TimelineStepper,
   },
   data() {
     return {
