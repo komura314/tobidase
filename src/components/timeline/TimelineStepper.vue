@@ -12,7 +12,7 @@
       <small>{{ steps[0].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[0].value">
-      <StepperContent />
+      <StepperContent :step="0" />
     </v-stepper-content>
 
     <v-stepper-step
@@ -27,7 +27,7 @@
       <small>{{ steps[1].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[1].value">
-      <StepperContent />
+      <StepperContent :step="1" />
     </v-stepper-content>
 
     <v-stepper-step
@@ -42,7 +42,7 @@
       <small>{{ steps[2].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[2].value">
-      <StepperContent />
+      <StepperContent :step="2" />
     </v-stepper-content>
 
     <v-stepper-step
@@ -57,7 +57,7 @@
       <small>{{ steps[3].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[3].value">
-      <StepperContent />
+      <StepperContent :step="3" />
     </v-stepper-content>
 
     <v-stepper-step
@@ -72,7 +72,7 @@
       <small>{{ steps[4].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[4].value">
-      <StepperContent />
+      <StepperContent :step="4" />
     </v-stepper-content>
 
     <v-stepper-step
@@ -87,7 +87,7 @@
       <small>{{ steps[5].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[5].value">
-      <StepperContent />
+      <StepperContent :step="5" />
     </v-stepper-content>
 
     <v-stepper-step
@@ -102,7 +102,7 @@
       <small>{{ steps[6].subtext }}</small>
     </v-stepper-step>
     <v-stepper-content :step="steps[6].value">
-      <StepperContent />
+      <StepperContent :step="6" />
     </v-stepper-content>
   </v-stepper>
 </template>
