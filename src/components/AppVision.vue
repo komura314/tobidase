@@ -1,6 +1,6 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    Visionです
+    <CompornentTitle title="VISION and HISTORY" ruby="将来像と経歴" />
     <br />
     <br />
     <br />
@@ -28,8 +28,12 @@
 <script>
 import { mapActions } from 'vuex'
 import { prefixCompornentId, prefixRefId, keyVision } from '../plugins/feald'
+import CompornentTitle from '../components/common/CompornentTitle.vue'
 export default {
   name: 'AppVision',
+  components: {
+    CompornentTitle,
+  },
   data() {
     return {
       keyId: keyVision,

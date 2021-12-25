@@ -1,6 +1,6 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    Workです
+    <CompornentTitle title="WORK" ruby="作品" />
     <br />
     <br />
     <br />
@@ -28,8 +28,12 @@
 <script>
 import { mapActions } from 'vuex'
 import { prefixCompornentId, prefixRefId, keyWork } from '../plugins/feald'
+import CompornentTitle from '../components/common/CompornentTitle.vue'
 export default {
   name: 'AppWork',
+  components: {
+    CompornentTitle,
+  },
   data() {
     return {
       keyId: keyWork,

@@ -1,6 +1,6 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    Contactです
+    <CompornentTitle title="CONTACT" ruby="連絡" />
     <br />
     <br />
     <br />
@@ -28,8 +28,12 @@
 <script>
 import { mapActions } from 'vuex'
 import { prefixCompornentId, prefixRefId, keyContact } from '../plugins/feald'
+import CompornentTitle from '../components/common/CompornentTitle.vue'
 export default {
   name: 'AppContact',
+  components: {
+    CompornentTitle,
+  },
   data() {
     return {
       keyId: keyContact,

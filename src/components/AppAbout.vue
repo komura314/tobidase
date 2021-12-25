@@ -1,8 +1,6 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    <div class="text-caption mt-2">私について</div>
-    <div class="text-h4 md-2">ABOUT ME</div>
-    <v-divider />
+    <CompornentTitle title="ABOUT ME" ruby="私について" />
     <v-row align="center" justify="center">
       <v-col cols="12" md="6">
         <MyPhoto />
@@ -18,11 +16,13 @@ import { mapActions } from 'vuex'
 import { prefixCompornentId, prefixRefId, keyAbout } from '../plugins/feald'
 import AboutTabs from '../components/about/AboutTabs.vue'
 import MyPhoto from '../components/about/MyPhoto.vue'
+import CompornentTitle from '../components/common/CompornentTitle.vue'
 export default {
   name: 'AppAbout',
   components: {
     AboutTabs,
     MyPhoto,
+    CompornentTitle,
   },
   data() {
     return {
