@@ -13,7 +13,7 @@
 </template>
 <script>
 import { mapActions } from 'vuex'
-import { prefixCompornentId, prefixRefId, keyAbout } from '../plugins/feald'
+import { prefixCompornentId, prefixRefId, keyAbout } from '../plugins/field'
 import AboutTabs from '../components/about/AboutTabs.vue'
 import MyPhoto from '../components/about/MyPhoto.vue'
 import CompornentTitle from '../components/common/CompornentTitle.vue'

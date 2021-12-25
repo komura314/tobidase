@@ -16,7 +16,7 @@ import {
   RADAR_RECOGNITION_VALUES,
   RADAR_STUDY_VALUES,
   RADAR_EXPERIENCE_VALUES,
-} from '../../plugins/feald'
+} from '../../plugins/field'
 export default {
   props: {
     step: {

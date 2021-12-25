@@ -11,7 +11,7 @@
 </template>
 <script>
 import { mapActions } from 'vuex'
-import { prefixCompornentId, prefixRefId, keyTop } from '../plugins/feald'
+import { prefixCompornentId, prefixRefId, keyTop } from '../plugins/field'
 export default {
   name: 'AppTop',
   data() {

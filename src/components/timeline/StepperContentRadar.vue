@@ -11,7 +11,7 @@ import {
   RADER_COLOR_BACK,
   RADER_COLOR_HIGHLITE,
   RADER_HIT_RADIUS,
-} from '../../plugins/feald'
+} from '../../plugins/field'
 export default {
   components: {
     RadarChart,

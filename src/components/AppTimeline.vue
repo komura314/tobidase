@@ -6,7 +6,7 @@
 </template>
 <script>
 import { mapActions } from 'vuex'
-import { prefixCompornentId, prefixRefId, keyTimeline } from '../plugins/feald'
+import { prefixCompornentId, prefixRefId, keyTimeline } from '../plugins/field'
 import CompornentTitle from './common/CompornentTitle.vue'
 import TimelineStepper from './timeline/TimelineStepper.vue'
 export default {

@@ -27,7 +27,7 @@
 </template>
 <script>
 import { mapActions } from 'vuex'
-import { prefixCompornentId, prefixRefId, keyWork } from '../plugins/feald'
+import { prefixCompornentId, prefixRefId, keyWork } from '../plugins/field'
 import CompornentTitle from '../components/common/CompornentTitle.vue'
 export default {
   name: 'AppWork',

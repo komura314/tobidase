@@ -59,7 +59,7 @@
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import { HEADERS } from '../plugins/feald'
+import { HEADERS } from '../plugins/field'
 export default {
   data() {
     return {
