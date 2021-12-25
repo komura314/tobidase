@@ -46,9 +46,6 @@ export default {
   },
   computed: {
     ...mapGetters('app-scroll', ['getTabTransition', 'getTabScrollEvent']),
-    tabSelected() {
-      return this.getAppScrollSelectTab
-    },
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll)

@@ -69,8 +69,11 @@ export default {
   },
   computed: {
     ...mapGetters('app-scroll', ['getAppScrollSelectTab']),
-    tabSelected() {
-      return this.getAppScrollSelectTab
+    tabSelected: {
+      get() {
+        return this.getAppScrollSelectTab
+      },
+      set(value) {},
     },
   },
   mounted() {
@@ -81,7 +84,7 @@ export default {
       'setAppScrollTabScrollEvent',
       'setAppScrollTabScrollEventTrue',
     ]),
-    onClick(header, scrollEventStop=true) {
+    onClick(header, scrollEventStop = true) {
       if (!header || !header.scrollId) {
         return
       }
@@ -89,9 +92,9 @@ export default {
       if (scrollEventStop) {
         this.setAppScrollTabScrollEvent(false)
       }
-      
+
       this.$vuetify.goTo(header.scrollId)
-      
+
       if (scrollEventStop) {
         setTimeout(this.setAppScrollTabScrollEventTrue, 500)
       }
