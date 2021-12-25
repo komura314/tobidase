@@ -52,7 +52,7 @@ export default {
         photo: require('@/assets/images/qualification3.png'),
       },
     ],
-    selectList: 1,
+    selectList: 0,
   }),
   computed: {
     imageSrc: {
