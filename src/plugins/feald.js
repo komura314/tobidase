@@ -1,6 +1,6 @@
 export const keyTop = 'top'
 export const keyAbout = 'about'
-export const keyVision = 'vision'
+export const keyTimeline = 'timeline'
 export const keyWork = 'work'
 export const keyContact = 'contact'
 
@@ -20,9 +20,9 @@ const PROFILE = {
 }
 
 const LIFEPLAN = {
-  key: keyVision,
-  disp: 'Vision',
-  scrollId: `#${prefixCompornentId}${keyVision}`,
+  key: keyTimeline,
+  disp: 'Timeline',
+  scrollId: `#${prefixCompornentId}${keyTimeline}`,
 }
 
 const DESIRED = {

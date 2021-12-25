@@ -2,7 +2,7 @@
   <v-container>
     <Top />
     <About />
-    <Vision />
+    <Timeline />
     <Work />
     <Contact />
     <br />
@@ -32,7 +32,7 @@
 import { mapGetters, mapActions } from 'vuex'
 import Top from '../components/AppTop'
 import About from '../components/AppAbout'
-import Vision from '../components/AppVision'
+import Timeline from '../components/AppTimeline'
 import Work from '../components/AppWork'
 import Contact from '../components/AppContact'
 export default {
@@ -40,7 +40,7 @@ export default {
   components: {
     Top,
     About,
-    Vision,
+    Timeline,
     Work,
     Contact,
   },

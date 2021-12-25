@@ -1,6 +1,6 @@
 <template>
   <div :id="compornentId" :ref="refId">
-    <CompornentTitle title="VISION and HISTORY" ruby="将来像と経歴" />
+    <CompornentTitle title="TIMELINE" ruby="過去と未来像" />
     <br />
     <br />
     <br />
@@ -27,18 +27,18 @@
 </template>
 <script>
 import { mapActions } from 'vuex'
-import { prefixCompornentId, prefixRefId, keyVision } from '../plugins/feald'
-import CompornentTitle from '../components/common/CompornentTitle.vue'
+import { prefixCompornentId, prefixRefId, keyTimeline } from '../plugins/feald'
+import CompornentTitle from './common/CompornentTitle.vue'
 export default {
-  name: 'AppVision',
+  name: 'AppTimeline',
   components: {
     CompornentTitle,
   },
   data() {
     return {
-      keyId: keyVision,
-      compornentId: prefixCompornentId + keyVision,
-      refId: prefixRefId + keyVision,
+      keyId: keyTimeline,
+      compornentId: prefixCompornentId + keyTimeline,
+      refId: prefixRefId + keyTimeline,
     }
   },
   mounted() {
