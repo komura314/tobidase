@@ -11,13 +11,13 @@
 </template>
 <script>
 import {
-  RADAR_HEADERS,
-  RADAR_VALUES,
-  RADAR_SKILL_VALUES,
-  RADAR_KNOWLEDGE_VALUES,
-  RADAR_RECOGNITION_VALUES,
-  RADAR_STUDY_VALUES,
-  RADAR_EXPERIENCE_VALUES,
+  STATUS_HEADERS,
+  STATUS_VALUES,
+  STATUS_SKILL_VALUES,
+  STATUS_KNOWLEDGE_VALUES,
+  STATUS_RECOGNITION_VALUES,
+  STATUS_STUDY_VALUES,
+  STATUS_EXPERIENCE_VALUES,
 } from '../../plugins/field'
 export default {
   props: {
@@ -28,38 +28,38 @@ export default {
   },
   data() {
     return {
-      headers: RADAR_HEADERS,
+      headers: STATUS_HEADERS,
     }
   },
   computed: {
     getSkillValue() {
       return `
-        ${RADAR_VALUES[this.step][0]}：
-        ${RADAR_SKILL_VALUES[RADAR_VALUES[this.step][0]]}
+        ${STATUS_VALUES[this.step][0]}：
+        ${STATUS_SKILL_VALUES[STATUS_VALUES[this.step][0]]}
         `
     },
     getKnowledgeValue() {
       return `
-        ${RADAR_VALUES[this.step][1]}：
-        ${RADAR_KNOWLEDGE_VALUES[RADAR_VALUES[this.step][1]]}
+        ${STATUS_VALUES[this.step][1]}：
+        ${STATUS_KNOWLEDGE_VALUES[STATUS_VALUES[this.step][1]]}
         `
     },
     getRecognitionValue() {
       return `
-        ${RADAR_VALUES[this.step][2]}：
-        ${RADAR_RECOGNITION_VALUES[RADAR_VALUES[this.step][2]]}
+        ${STATUS_VALUES[this.step][2]}：
+        ${STATUS_RECOGNITION_VALUES[STATUS_VALUES[this.step][2]]}
         `
     },
     getStudyValue() {
       return `
-        ${RADAR_VALUES[this.step][3]}：
-        ${RADAR_STUDY_VALUES[RADAR_VALUES[this.step][3]]}
+        ${STATUS_VALUES[this.step][3]}：
+        ${STATUS_STUDY_VALUES[STATUS_VALUES[this.step][3]]}
         `
     },
     getExperienceValue() {
       return `
-        ${RADAR_VALUES[this.step][4]}：
-        ${RADAR_EXPERIENCE_VALUES[RADAR_VALUES[this.step][4]]}
+        ${STATUS_VALUES[this.step][4]}：
+        ${STATUS_EXPERIENCE_VALUES[STATUS_VALUES[this.step][4]]}
         `
     },
   },

@@ -54,8 +54,8 @@ export const TIMELINE_TITLES = [
   '3年後',
   '5年後',
 ]
-export const RADAR_HEADERS = ['技術力', '知識量', '知名度', '勉強量', '経験値']
-export const RADAR_SKILL_VALUES = [
+export const STATUS_HEADERS = ['技術力', '知識量', '知名度', '勉強量', '経験値']
+export const STATUS_SKILL_VALUES = [
   '',
   'AtCoder 灰色',
   'AtCoder 茶色',
@@ -63,7 +63,7 @@ export const RADAR_SKILL_VALUES = [
   'AtCoder 水色',
   'AtCoder 青色以上',
 ]
-export const RADAR_KNOWLEDGE_VALUES = [
+export const STATUS_KNOWLEDGE_VALUES = [
   '',
   '業務における知識のみ',
   '記事による情報発信を実施（ブログ等）',
@@ -71,7 +71,7 @@ export const RADAR_KNOWLEDGE_VALUES = [
   '収益が発生する情報発信を実施（書籍等）',
   '副業となる情報発信を実施（講師等）',
 ]
-export const RADAR_RECOGNITION_VALUES = [
+export const STATUS_RECOGNITION_VALUES = [
   '',
   '社内現場で活躍',
   '社内全域で活躍',
@@ -79,7 +79,7 @@ export const RADAR_RECOGNITION_VALUES = [
   'SNSフォロワ数 >>> フォロー数',
   'ある分野の第一人者',
 ]
-export const RADAR_STUDY_VALUES = [
+export const STATUS_STUDY_VALUES = [
   '',
   '業務外 年150時間未満',
   '業務外 年150～300時間',
@@ -87,7 +87,7 @@ export const RADAR_STUDY_VALUES = [
   '業務外 年450～600時間',
   '業務外 年600時間以上',
 ]
-export const RADAR_EXPERIENCE_VALUES = [
+export const STATUS_EXPERIENCE_VALUES = [
   '',
   '開発経験あり',
   'リーダ経験あり',
@@ -95,7 +95,7 @@ export const RADAR_EXPERIENCE_VALUES = [
   'スクラム全役割経験あり',
   'プロジェクトマネージャ経験あり',
 ]
-export const RADAR_VALUES = [
+export const STATUS_VALUES = [
   [1, 1, 1, 1, 1],
   [1, 1, 1, 2, 1],
   [2, 1, 1, 3, 1],
