@@ -38,7 +38,7 @@
 <script>
 export default {
   data: () => ({
-    initiallyOpen: ['FrontEnd', 'BackEnd'],
+    initiallyOpen: ['FrontEnd'],
     tooltip: ['', '★：勉強中', '★★：経験あり', '★★★：自信あり'],
     files: {
       front: 'mdi-monitor',
@@ -87,16 +87,11 @@ export default {
         ],
       },
       {
-        name: 'Cloud',
-        star: null,
-        file: 'cloud',
-        children: [{ name: 'GCP', star: 2, file: 'gcp' }],
-      },
-      {
         name: 'Other',
         star: null,
         file: 'folder',
         children: [
+          { name: 'GCP', star: 2, file: 'gcp' },
           { name: 'Docker', star: 2, file: 'docker' },
           { name: 'Swift', star: 1, file: 'swift' },
           { name: 'Markdown', star: 3, file: 'md' },
