@@ -22,6 +22,15 @@
         :step="step.value"
       />
     </v-stepper-items>
+    <v-system-bar color="white">
+      <v-btn icon class="ma-3" @click="clickLeft()">
+        <v-icon>mdi-chevron-left</v-icon>
+      </v-btn>
+      <v-spacer />
+      <v-btn icon class="ma-3" @click="clickRight()">
+        <v-icon>mdi-chevron-right</v-icon>
+      </v-btn>
+    </v-system-bar>
   </v-stepper>
 </template>
 <script>
@@ -80,6 +89,16 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    clickLeft() {
+      this.selectStep = this.selectStep - 1
+      if (this.selectStep < 0) this.selectStep = this.steps.length - 1
+    },
+    clickRight() {
+      this.selectStep = this.selectStep + 1
+      if (this.selectStep >= this.steps.length) this.selectStep = 0
+    },
   },
 }
 </script>
