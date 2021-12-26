@@ -14,7 +14,6 @@
       <v-col cols="12" md="6">
         <v-row align="center" justify="center">
           <v-col cols="12" md="12">
-            <StepperContentRadar :step="step" />
           </v-col>
           <v-col cols="12" md="12">
             <StepperContentRadarDetail :step="step" />
@@ -25,13 +24,11 @@
   </div>
 </template>
 <script>
-import StepperContentRadar from './StepperContentRadar.vue'
 import StepperContentRadarDetail from './StepperContentRadarDetail.vue'
 import StepperHeaderImage from './StepperHeaderImage.vue'
 import TimelineDetail from './TimelineDetail.vue'
 export default {
   components: {
-    StepperContentRadar,
     StepperContentRadarDetail,
     StepperHeaderImage,
     TimelineDetail,
