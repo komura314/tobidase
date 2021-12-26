@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-stepper-content :step="step">
     <v-row justify="center">
       <v-col cols="12" md="6">
         <v-row align="center" justify="center">
@@ -13,15 +13,14 @@
       </v-col>
       <v-col cols="12" md="6">
         <v-row align="center" justify="center">
-          <v-col cols="12" md="12">
-          </v-col>
+          <v-col cols="12" md="12"> </v-col>
           <v-col cols="12" md="12">
             <StepperContentRadarDetail :step="step" />
           </v-col>
         </v-row>
       </v-col>
     </v-row>
-  </div>
+  </v-stepper-content>
 </template>
 <script>
 import StepperContentRadarDetail from './StepperContentRadarDetail.vue'

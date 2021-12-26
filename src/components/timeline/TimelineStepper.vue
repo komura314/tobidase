@@ -16,27 +16,11 @@
       <TimelineStep :step="steps[6]" :select-step="selectStep" />
     </v-stepper-header>
     <v-stepper-items>
-      <v-stepper-content :step="steps[0].value">
-        <StepperContent :step="0" />
-      </v-stepper-content>
-      <v-stepper-content :step="steps[1].value">
-        <StepperContent :step="1" />
-      </v-stepper-content>
-      <v-stepper-content :step="steps[2].value">
-        <StepperContent :step="2" />
-      </v-stepper-content>
-      <v-stepper-content :step="steps[3].value">
-        <StepperContent :step="3" />
-      </v-stepper-content>
-      <v-stepper-content :step="steps[4].value">
-        <StepperContent :step="4" />
-      </v-stepper-content>
-      <v-stepper-content :step="steps[5].value">
-        <StepperContent :step="5" />
-      </v-stepper-content>
-      <v-stepper-content :step="steps[6].value">
-        <StepperContent :step="6" />
-      </v-stepper-content>
+      <StepperContent
+        v-for="step in steps"
+        :key="step.value"
+        :step="step.value"
+      />
     </v-stepper-items>
   </v-stepper>
 </template>
