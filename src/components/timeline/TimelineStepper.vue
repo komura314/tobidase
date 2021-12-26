@@ -79,7 +79,7 @@ export default {
           value: 5,
           icon: 'mdi-human-baby-changing-table',
           text: '3年後',
-          subtext: '子育て期',
+          subtext: '出産期',
         },
         {
           value: 6,

@@ -7,7 +7,10 @@
             <StepperHeaderImage :step="step" />
           </v-col>
           <v-col cols="12" md="12">
-            <TimelineDetail :step="step" />
+            <TimelineDetaile :step="step" />
+          </v-col>
+          <v-col cols="12" md="12">
+            <TimelineEvent :step="step" />
           </v-col>
         </v-row>
       </v-col>
@@ -24,12 +27,14 @@
 <script>
 import StepperContentStatus from './StepperContentStatus.vue'
 import StepperHeaderImage from './StepperHeaderImage.vue'
-import TimelineDetail from './TimelineDetail.vue'
+import TimelineDetaile from './TimelineDetaile.vue'
+import TimelineEvent from './TimelineEvent.vue'
 export default {
   components: {
     StepperContentStatus,
     StepperHeaderImage,
-    TimelineDetail,
+    TimelineDetaile,
+    TimelineEvent,
   },
   props: {
     step: {
