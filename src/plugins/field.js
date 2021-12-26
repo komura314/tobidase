@@ -95,6 +95,13 @@ export const STATUS_EXPERIENCE_VALUES = [
   'スクラム全役割経験あり',
   'プロジェクトマネージャ経験あり',
 ]
+export const STATUS_VALUE_DETAILS = [
+  STATUS_SKILL_VALUES,
+  STATUS_KNOWLEDGE_VALUES,
+  STATUS_RECOGNITION_VALUES,
+  STATUS_STUDY_VALUES,
+  STATUS_EXPERIENCE_VALUES,
+]
 export const STATUS_VALUES = [
   [1, 1, 1, 1, 1],
   [1, 1, 1, 2, 1],

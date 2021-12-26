@@ -13,9 +13,8 @@
       </v-col>
       <v-col cols="12" md="6">
         <v-row align="center" justify="center">
-          <v-col cols="12" md="12"> </v-col>
           <v-col cols="12" md="12">
-            <StepperContentStatusDetail :step="step" />
+            <StepperContentStatus :step="step" />
           </v-col>
         </v-row>
       </v-col>
@@ -23,12 +22,12 @@
   </v-stepper-content>
 </template>
 <script>
-import StepperContentStatusDetail from './StepperContentStatusDetail.vue'
+import StepperContentStatus from './StepperContentStatus.vue'
 import StepperHeaderImage from './StepperHeaderImage.vue'
 import TimelineDetail from './TimelineDetail.vue'
 export default {
   components: {
-    StepperContentStatusDetail,
+    StepperContentStatus,
     StepperHeaderImage,
     TimelineDetail,
   },
