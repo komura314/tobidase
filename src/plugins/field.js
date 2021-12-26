@@ -45,7 +45,7 @@ for (const header of HEADERS) {
 }
 
 // RadarChart
-export const RADAR_TITLES = [
+export const TIMELINE_TITLES = [
   '5年前',
   '3年前',
   '1年前',

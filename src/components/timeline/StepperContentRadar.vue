@@ -4,7 +4,7 @@
 <script>
 import RadarChart from '../common/RadarChart.vue'
 import {
-  RADAR_TITLES,
+  TIMELINE_TITLES,
   RADAR_HEADERS,
   RADAR_VALUES,
   RADER_COLOR,
@@ -28,7 +28,7 @@ export default {
         labels: RADAR_HEADERS,
         datasets: [
           {
-            label: RADAR_TITLES[this.step],
+            label: TIMELINE_TITLES[this.step],
             data: RADAR_VALUES[this.step],
             backgroundColor: RADER_COLOR_BACK[this.step],
             borderColor: RADER_COLOR[this.step],
