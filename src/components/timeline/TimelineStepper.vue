@@ -1,116 +1,52 @@
 <template>
-  <v-stepper v-model="selectStep" vertical non-linear>
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[0].value"
-      :edit-icon="steps[0].icon"
-      :color="selectStep >= steps[0].value ? 'primary' : 'grey'"
-      @click="onClick(steps[0].value)"
-    >
-      {{ steps[0].text }}
-      <small>{{ steps[0].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[0].value">
-      <StepperContent :step="0" />
-    </v-stepper-content>
-
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[1].value"
-      :edit-icon="steps[1].icon"
-      :color="selectStep >= steps[1].value ? 'primary' : 'grey'"
-      @click="onClick(steps[1].value)"
-    >
-      {{ steps[1].text }}
-      <small>{{ steps[1].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[1].value">
-      <StepperContent :step="1" />
-    </v-stepper-content>
-
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[2].value"
-      :edit-icon="steps[2].icon"
-      :color="selectStep >= steps[2].value ? 'primary' : 'grey'"
-      @click="onClick(steps[2].value)"
-    >
-      {{ steps[2].text }}
-      <small>{{ steps[2].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[2].value">
-      <StepperContent :step="2" />
-    </v-stepper-content>
-
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[3].value"
-      :edit-icon="steps[3].icon"
-      :color="selectStep >= steps[3].value ? 'primary' : 'grey'"
-      @click="onClick(steps[3].value)"
-    >
-      {{ steps[3].text }}
-      <small>{{ steps[3].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[3].value">
-      <StepperContent :step="3" />
-    </v-stepper-content>
-
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[4].value"
-      :edit-icon="steps[4].icon"
-      :color="selectStep >= steps[4].value ? 'primary' : 'grey'"
-      @click="onClick(steps[4].value)"
-    >
-      {{ steps[4].text }}
-      <small>{{ steps[4].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[4].value">
-      <StepperContent :step="4" />
-    </v-stepper-content>
-
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[5].value"
-      :edit-icon="steps[5].icon"
-      :color="selectStep >= steps[5].value ? 'primary' : 'grey'"
-      @click="onClick(steps[5].value)"
-    >
-      {{ steps[5].text }}
-      <small>{{ steps[5].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[5].value">
-      <StepperContent :step="5" />
-    </v-stepper-content>
-
-    <v-stepper-step
-      complete
-      editable
-      :step="steps[6].value"
-      :edit-icon="steps[6].icon"
-      :color="selectStep >= steps[6].value ? 'primary' : 'grey'"
-      @click="onClick(steps[6].value)"
-    >
-      {{ steps[6].text }}
-      <small>{{ steps[6].subtext }}</small>
-    </v-stepper-step>
-    <v-stepper-content :step="steps[6].value">
-      <StepperContent :step="6" />
-    </v-stepper-content>
+  <v-stepper v-model="selectStep" non-linear>
+    <v-stepper-header>
+      <TimelineStep :step="steps[0]" :select-step="selectStep" />
+      <v-divider />
+      <TimelineStep :step="steps[1]" :select-step="selectStep" />
+      <v-divider />
+      <TimelineStep :step="steps[2]" :select-step="selectStep" />
+      <v-divider />
+      <TimelineStep :step="steps[3]" :select-step="selectStep" />
+      <v-divider />
+      <TimelineStep :step="steps[4]" :select-step="selectStep" />
+      <v-divider />
+      <TimelineStep :step="steps[5]" :select-step="selectStep" />
+      <v-divider />
+      <TimelineStep :step="steps[6]" :select-step="selectStep" />
+    </v-stepper-header>
+    <v-stepper-items>
+      <v-stepper-content :step="steps[0].value">
+        <StepperContent :step="0" />
+      </v-stepper-content>
+      <v-stepper-content :step="steps[1].value">
+        <StepperContent :step="1" />
+      </v-stepper-content>
+      <v-stepper-content :step="steps[2].value">
+        <StepperContent :step="2" />
+      </v-stepper-content>
+      <v-stepper-content :step="steps[3].value">
+        <StepperContent :step="3" />
+      </v-stepper-content>
+      <v-stepper-content :step="steps[4].value">
+        <StepperContent :step="4" />
+      </v-stepper-content>
+      <v-stepper-content :step="steps[5].value">
+        <StepperContent :step="5" />
+      </v-stepper-content>
+      <v-stepper-content :step="steps[6].value">
+        <StepperContent :step="6" />
+      </v-stepper-content>
+    </v-stepper-items>
   </v-stepper>
 </template>
 <script>
 import StepperContent from './StepperContent.vue'
+import TimelineStep from './TimelineStep.vue'
 export default {
   components: {
     StepperContent,
+    TimelineStep,
   },
   data() {
     return {
@@ -160,11 +96,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    onClick(step) {
-      this.selectStep = step
-    },
   },
 }
 </script>
