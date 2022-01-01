@@ -1,10 +1,12 @@
 <template>
   <v-card class="ma-5">
-    <v-card-title>能力値</v-card-title>
-    <v-card-text v-for="i in 5" :key="i - 1">
-      {{ headers[i - 1] }}{{ getStatusText(i - 1) }}
+    <v-card-title class="md-5">能力値</v-card-title>
+    <v-card-text
+      v-for="i in 5"
+      :key="i - 1"
+      :class="statusColor[statusValues[step][i - 1]] + '--text'"
+    >
       <v-slider
-        :tick-labels="ticksLabels"
         min="1"
         max="5"
         step="1"
@@ -15,7 +17,10 @@
         :track-color="statusColor[statusValues[step][i - 1]]"
         readonly
         hide-details
+        thumb-label="always"
+        thumb-size="24"
       />
+      {{ headers[i - 1] }}{{ getStatusText(i - 1) }}
     </v-card-text>
     <br />
   </v-card>
@@ -38,7 +43,7 @@ export default {
       statusValues: STATUS_VALUES,
       headers: STATUS_HEADERS,
       ticksLabels: ['1', '2', '3', '4', '5'],
-      statusColor: ['', 'grey', 'light-blue', 'green', 'orange', 'red'],
+      statusColor: ['', 'status1', 'status2', 'status3', 'status4', 'status5'],
     }
   },
   computed: {},
