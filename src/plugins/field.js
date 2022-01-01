@@ -19,16 +19,16 @@ const PROFILE = {
   scrollId: `#${prefixCompornentId}${keyAbout}`,
 }
 
+const WORK = {
+  key: keyWork,
+  disp: 'Work',
+  scrollId: `#${prefixCompornentId}${keyWork}`,
+}
+
 const LIFEPLAN = {
   key: keyTimeline,
   disp: 'Timeline',
   scrollId: `#${prefixCompornentId}${keyTimeline}`,
-}
-
-const DESIRED = {
-  key: keyWork,
-  disp: 'Work',
-  scrollId: `#${prefixCompornentId}${keyWork}`,
 }
 
 const CONTACT = {
@@ -37,7 +37,7 @@ const CONTACT = {
   scrollId: `#${prefixCompornentId}${keyContact}`,
 }
 
-export const HEADERS = [TOP, PROFILE, LIFEPLAN, DESIRED, CONTACT]
+export const HEADERS = [TOP, PROFILE, WORK, LIFEPLAN, CONTACT]
 
 export const HEADER_KEY_LIST = []
 for (const header of HEADERS) {

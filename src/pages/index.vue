@@ -2,8 +2,8 @@
   <v-container>
     <Top />
     <About />
-    <Timeline />
     <Work />
+    <Timeline />
     <Contact />
     <br />
     <br />
