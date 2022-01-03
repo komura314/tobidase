@@ -1,18 +1,20 @@
 <template>
-  <v-carousel
-    v-model="selectMyPhoto"
-    class="carousel-size mt-10"
-    delimiter-icon="mdi-circle-medium"
-    hide-delimiter-background
-  >
-    <v-layout justify-center>
-      <v-carousel-item v-for="(photoPath, i) in myPhotos" :key="i">
-        <v-card shaped>
-          <v-img :src="photoPath" class="photo-size" />
-        </v-card>
-      </v-carousel-item>
-    </v-layout>
-  </v-carousel>
+  <div align="center">
+    <v-carousel
+      v-model="selectMyPhoto"
+      class="carousel-size mt-10"
+      delimiter-icon="mdi-circle-medium"
+      hide-delimiter-background
+    >
+      <v-layout justify-center>
+        <v-carousel-item v-for="(photoPath, i) in myPhotos" :key="i">
+          <v-card shaped>
+            <v-img :src="photoPath" class="photo-size" />
+          </v-card>
+        </v-carousel-item>
+      </v-layout>
+    </v-carousel>
+  </div>
 </template>
 <script>
 export default {
