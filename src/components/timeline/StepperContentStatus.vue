@@ -8,7 +8,7 @@
     >
       <v-slider
         min="1"
-        max="5"
+        max="4"
         step="1"
         ticks="always"
         tick-size="5"
@@ -42,8 +42,8 @@ export default {
     return {
       statusValues: STATUS_VALUES,
       headers: STATUS_HEADERS,
-      ticksLabels: ['1', '2', '3', '4', '5'],
-      statusColor: ['', 'status1', 'status2', 'status3', 'status4', 'status5'],
+      ticksLabels: ['1', '2', '3', '4'],
+      statusColor: ['', 'status1', 'status2', 'status3', 'status4'],
     }
   },
   computed: {},

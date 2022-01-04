@@ -109,6 +109,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .work-box {
-  min-height: 65vh;
+  min-height: 70vh;
 }
 </style>

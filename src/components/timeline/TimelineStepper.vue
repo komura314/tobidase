@@ -8,12 +8,6 @@
       <TimelineStep :step="steps[2]" :select-step="selectStep" />
       <v-divider />
       <TimelineStep :step="steps[3]" :select-step="selectStep" />
-      <v-divider />
-      <TimelineStep :step="steps[4]" :select-step="selectStep" />
-      <v-divider />
-      <TimelineStep :step="steps[5]" :select-step="selectStep" />
-      <v-divider />
-      <TimelineStep :step="steps[6]" :select-step="selectStep" />
     </v-stepper-header>
     <v-stepper-items>
       <StepperContent
@@ -24,11 +18,11 @@
     </v-stepper-items>
     <v-system-bar color="white">
       <v-btn icon class="ma-3" @click="clickLeft()">
-        <v-icon>mdi-chevron-left</v-icon>
+        <v-icon>mdi-chevron-left-circle</v-icon>
       </v-btn>
       <v-spacer />
       <v-btn icon class="ma-3" @click="clickRight()">
-        <v-icon>mdi-chevron-right</v-icon>
+        <v-icon>mdi-chevron-right-circle</v-icon>
       </v-btn>
     </v-system-bar>
   </v-stepper>
@@ -43,49 +37,31 @@ export default {
   },
   data() {
     return {
-      selectStep: 3,
+      selectStep: 1,
       steps: [
         {
           value: 0,
-          icon: 'mdi-google-controller',
-          text: '5年前',
-          subtext: 'ネットゲーム期',
+          icon: 'mdi-lead-pencil',
+          text: '～2年前',
+          subtext: '焦燥期',
         },
         {
           value: 1,
-          icon: 'mdi-google-controller-off',
-          text: '3年前',
-          subtext: '変革期',
+          icon: 'mdi-source-branch',
+          text: '2年前～現在',
+          subtext: '転換期',
         },
         {
           value: 2,
-          icon: 'mdi-lead-pencil',
-          text: '1年前',
-          subtext: '勉学期',
+          icon: 'mdi-arrow-up-right-bold',
+          text: '現在～2年後',
+          subtext: '活動期',
         },
         {
           value: 3,
-          icon: 'mdi-arrow-up-right-bold',
-          text: '現在',
-          subtext: '評価期',
-        },
-        {
-          value: 4,
-          icon: 'mdi-account-heart',
-          text: '1年後',
-          subtext: '結婚期',
-        },
-        {
-          value: 5,
-          icon: 'mdi-human-baby-changing-table',
-          text: '3年後',
-          subtext: '出産期',
-        },
-        {
-          value: 6,
-          icon: 'mdi-home',
-          text: '5年後',
-          subtext: '定住期',
+          icon: 'mdi-cash-100',
+          text: '2年後～',
+          subtext: '副業期',
         },
       ],
     }

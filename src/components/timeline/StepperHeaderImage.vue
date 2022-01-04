@@ -28,9 +28,6 @@ export default {
         require('@/assets/images/timeline2.png'),
         require('@/assets/images/timeline3.png'),
         require('@/assets/images/timeline4.png'),
-        require('@/assets/images/timeline5.png'),
-        require('@/assets/images/timeline6.png'),
-        require('@/assets/images/timeline7.png'),
       ],
     }
   },
