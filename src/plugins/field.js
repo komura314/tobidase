@@ -51,7 +51,7 @@ export const TIMELINE_TITLES = [
   '現在～2年後',
   '2年後～',
 ]
-export const STATUS_HEADERS = ['技術力', '知識量', '知名度', '勉強量', '経験値']
+export const STATUS_HEADERS = ['技術力', '知識量', '知名度', '経験値', '勉強量']
 export const STATUS_SKILL_VALUES = [
   '',
   'AtCoder 灰色',
@@ -62,7 +62,7 @@ export const STATUS_SKILL_VALUES = [
 export const STATUS_KNOWLEDGE_VALUES = [
   '',
   '業務における知識のみ',
-  '記事による情報発信を実施（ブログ等）',
+  'Webによる情報発信を実施（技術ブログ等）',
   '発表による情報発信を実施（LT等）',
   '収益が発生する情報発信を実施（書籍等）',
 ]
@@ -70,8 +70,15 @@ export const STATUS_RECOGNITION_VALUES = [
   '',
   '社内現場で活躍',
   '社内全域で活躍',
-  '外部コミュニティの一部で活躍',
+  '外部コミュニティで活躍',
   'SNSフォロワ数 >>> フォロー数',
+]
+export const STATUS_EXPERIENCE_VALUES = [
+  '',
+  '開発経験あり',
+  'リーダ経験あり',
+  'アジャイル経験あり',
+  'プロジェクトマネージャ経験あり',
 ]
 export const STATUS_STUDY_VALUES = [
   '',
@@ -80,23 +87,16 @@ export const STATUS_STUDY_VALUES = [
   '業務外 年300～500時間',
   '業務外 年500時間以上',
 ]
-export const STATUS_EXPERIENCE_VALUES = [
-  '',
-  '開発経験あり',
-  'リーダ経験あり',
-  'アジャイル経験あり',
-  'スクラム全役割経験あり',
-]
 export const STATUS_VALUE_DETAILS = [
   STATUS_SKILL_VALUES,
   STATUS_KNOWLEDGE_VALUES,
   STATUS_RECOGNITION_VALUES,
-  STATUS_STUDY_VALUES,
   STATUS_EXPERIENCE_VALUES,
+  STATUS_STUDY_VALUES,
 ]
 export const STATUS_VALUES = [
-  [1, 1, 1, 2, 1],
-  [2, 2, 2, 3, 2],
-  [3, 3, 3, 4, 3],
-  [4, 4, 4, 3, 4],
+  [1, 1, 1, 1, 2],
+  [2, 2, 2, 2, 3],
+  [3, 3, 3, 3, 4],
+  [4, 4, 4, 4, 3],
 ]
