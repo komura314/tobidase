@@ -39,7 +39,7 @@ export default {
       {
         icon: 'mdi-file',
         text: '基本情報処理技術者',
-        photo: require('@/assets/images/noimage.png'),
+        photo: require('@/assets/images/qualification1.png'),
       },
       {
         icon: 'mdi-file',
