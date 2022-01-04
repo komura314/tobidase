@@ -1,28 +1,18 @@
 <template>
   <div :id="compornentId" :ref="refId">
     <CompornentTitle title="CONTACT" ruby="連絡" />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <v-row align="center" justify="center" class="conntact-box">
+      <v-col class="my-5">
+        <p>現在、連絡用フォームを作成中です。</p>
+        <p>ご連絡を頂ける場合は、お手数をおかけしますが下記アドレスまでご連絡をお願いいたします。</p>
+        <br />
+        <p>アドレス：ktoda.job@gmail.com</p>
+        <br />
+        <div align="center">
+          <v-img :src="require('@/assets/images/construction.png')" class="img-size"/>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <script>
@@ -57,3 +47,11 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.conntact-box {
+  min-height: 70vh;
+}
+.img-size {
+  max-width: 300px;
+}
+</style>
