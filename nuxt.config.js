@@ -38,7 +38,10 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    // https://github.com/axios/axios
+    '@nuxtjs/axios',
+  ],
 
   googleFonts: {
     families: {
