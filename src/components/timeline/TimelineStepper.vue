@@ -1,5 +1,12 @@
 <template>
-  <v-stepper v-model="selectStep" non-linear>
+  <v-stepper
+    v-model="selectStep"
+    v-touch="{
+      left: () => clickLeft(),
+      right: () => clickRight(),
+    }"
+    non-linear
+  >
     <v-stepper-header>
       <TimelineStep :step="steps[0]" :select-step="selectStep" />
       <v-divider />
@@ -16,7 +23,7 @@
         :step="step.value"
       />
     </v-stepper-items>
-    <v-system-bar color="white">
+    <v-toolbar color="white" class="hidden-md-and-up">
       <v-btn icon class="ma-3" @click="clickLeft()">
         <v-icon>mdi-chevron-left-circle</v-icon>
       </v-btn>
@@ -24,7 +31,7 @@
       <v-btn icon class="ma-3" @click="clickRight()">
         <v-icon>mdi-chevron-right-circle</v-icon>
       </v-btn>
-    </v-system-bar>
+    </v-toolbar>
   </v-stepper>
 </template>
 <script>
