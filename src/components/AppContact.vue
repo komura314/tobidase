@@ -48,7 +48,7 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
-        <v-dialog v-model="isSubmitComplete" width="500">
+        <v-dialog v-model="viewSubmitCompleteDialog" width="500">
           <v-card>
             <v-card-title class="text-h5 grey lighten-2">
               完了
@@ -56,14 +56,14 @@
 
             <v-card-text class="my-5">
               お問い合わせ内容を送信しました。<br />
-              確認し次第、折り返しご連絡させていただきます。
+              確認し次第折り返しご連絡させていただきます。
             </v-card-text>
 
             <v-divider></v-divider>
 
             <v-card-actions>
               <v-spacer />
-              <v-btn color="primary" text @click="isSubmitComplete = false">
+              <v-btn color="primary" text @click="viewSubmitCompleteDialog = false">
                 OK
               </v-btn>
             </v-card-actions>
@@ -94,7 +94,7 @@ export default {
       value: '',
 
       viewSubmitDialog: false,
-      isSubmitComplete: false,
+      viewSubmitCompleteDialog: false,
 
       required: (value) => !!value || '必ず入力してください',
     }
@@ -114,7 +114,6 @@ export default {
     },
     submit() {
       const submitCheck = this.$refs.form.validate()
-      console.log(submitCheck)
       if (submitCheck) {
         this.viewSubmitDialog = true
       }
@@ -130,7 +129,7 @@ export default {
       const GOOGLE_FORM_ACTION =
         'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfKkETS_ySpNo7ihv4mNn6rF0eyUT2oxkqM0s1xrpjzu2uOOQ/formResponse'
       axios.post(GOOGLE_FORM_ACTION, submitParams).then(() => {})
-      this.isSubmitComplete = true
+      this.viewSubmitCompleteDialog = true
     },
   },
 }
