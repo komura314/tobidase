@@ -51,12 +51,12 @@
         <v-dialog v-model="isSubmitComplete" width="500">
           <v-card>
             <v-card-title class="text-h5 grey lighten-2">
-              送信完了
+              完了
             </v-card-title>
 
             <v-card-text class="my-5">
               お問い合わせ内容を送信しました。<br />
-              確認し次第連絡させていただきます。
+              確認し次第、折り返しご連絡させていただきます。
             </v-card-text>
 
             <v-divider></v-divider>
