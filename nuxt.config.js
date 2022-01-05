@@ -70,6 +70,7 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
           appHeader: colors.grey.lighten5,
+          appFooter: colors.grey.darken1,
           status1: colors.blueGrey.darken1,
           status2: colors.brown.lighten2,
           status3: colors.green.darken1,
